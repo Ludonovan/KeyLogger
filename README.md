@@ -4,27 +4,27 @@ This project was created for the Senior Design (Capstone) course at Shippensburg
 ## How to use this program
 
 On Raspberry Pi:
-Start server: python3 server.py
-    - This is the http server used to communicate with the GUI. When the capture button is pressed on the web app GUI, it sends a request to the server, and it runs capture.py.
-If not using GUI web app, run capture: python3 capture.py
-    - This will automatically run the gradient, initializer (if the system is not initialized), and translation programs.
-If using web app:
-    - Click the capture button, the extracted values should display within a few seconds.
+Start server: python3 server.py  
+    - This is the http server used to communicate with the GUI. When the capture button is pressed on the web app GUI, it sends a request to the server, and it runs capture.py.  
+If not using GUI web app, run capture: python3 capture.py  
+    - This will automatically run the gradient, initializer (if the system is not initialized), and translation programs.  
+If using web app:  
+    - Click the capture button, the extracted values should display within a few seconds.  
 
-If not using Raspberry Pi:
-    - ** If running on non-Pi hardware, the reference images in the repo can be used. The images stored are primarily from previous testing runs. The code should not have to be altered to take in different values. **
-    - The gradient, initializer, and translator can be run in sequence to demonstrate the software without using the Raspberry Pi.
-    - Ensure there is a clean picture to use for the gradient.
-    - Run gradient program: python3 gradient.py
-        - The output of this program is used for the translator.
-    - The values in value_storage.txt should be accurate enough for a static image, so long as the image was taken from the device.
-    - The initializer program *can* be ran, but it is strongly discouraged. The initializer is the heart of the translation software, as the translation software uses the values in the intializer to find the key bittings. The initializer **MUST** be run with a special key that has the highest and lowest bitting values. 
-        - The initializer must be run with the key in the repo labeled "Reference_Key.png".
-        - If the intializer is run, a window should pop up with the gradient of the key.
-        - When the image appears, carefully click on each bitting (flat spots on cut of key), paying close attention to the first and last bittings, as well as the highest and lowest bittings. When all 7 bittings are clicked, press any button on your keyboard to save and exit. 
-    - Once you have the gradient and the values from the initializer, you can run the translation software.
-        - python3 translator.py
-        - This will either output to the screen or to a .png file, depending on which lines are commented out in the translator program. 
+If not using Raspberry Pi:  
+    - ** If running on non-Pi hardware, the reference images in the repo can be used. The images stored are primarily from previous testing runs. The code should not have to be altered to take in different values. **  
+    - The gradient, initializer, and translator can be run in sequence to demonstrate the software without using the Raspberry Pi.  
+    - Ensure there is a clean picture to use for the gradient.  
+    - Run gradient program: python3 gradient.py  
+        - The output of this program is used for the translator.  
+    - The values in value_storage.txt should be accurate enough for a static image, so long as the image was taken from the device.  
+    - The initializer program *can* be ran, but it is strongly discouraged. The initializer is the heart of the translation software, as the translation software uses the values in the intializer to find the key bittings. The initializer **MUST** be run with a special key   that has the highest and lowest bitting values.   
+        - The initializer must be run with the key in the repo labeled "Reference_Key.png".  
+        - If the intializer is run, a window should pop up with the gradient of the key.  
+        - When the image appears, carefully click on each bitting (flat spots on cut of key), paying close attention to the first and last bittings, as well as the highest and lowest bittings. When all 7 bittings are clicked, press any button on your keyboard to save and exit.   
+    - Once you have the gradient and the values from the initializer, you can run the translation software.  
+        - python3 translator.py  
+        - This will either output to the screen or to a .png file, depending on which lines are commented out in the translator program.   
 
 ## Python Files
 
