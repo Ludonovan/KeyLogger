@@ -64,11 +64,11 @@ This directory contains the Web App.
 
 ## Areas of Improvement
 
-There are a few issues that occurred during the testing phases of our project.
-    - The capture program is very slow. This is for two main reasons:
-        - The camera takes at least a full second to focus.
-            - We opted to not use the autofocus, as that took even longer. Setting the focus manually still takes about a second, but we had some issues where it would take longer in some instances.
-        - The gradient software is slow
-            - Throughout the project we used two different types of edge detection, a morphological gradient and cv2.Canny. We decided that using cv2.Canny was a better option, as it gave a thinner line, and sometimes an image with less noise.
-            - This time can be significantly lowered if we use C++ for the gradient instead of python. 
+There are a few issues that occurred during the testing phases of our project.  
+    - The capture program is very slow. This is for two main reasons:  
+        - The camera takes at least a full second to focus.  
+            - We opted to not use the autofocus, as that took even longer. Setting the focus manually still takes about a second, but we had some issues where it would take longer in some instances.  
+        - The gradient software is slow  
+            - Throughout the project we used two different types of edge detection, a morphological gradient and cv2.Canny. We decided that using cv2.Canny was a better option, as it gave a thinner line, and sometimes an image with less noise.  
+            - This time can be significantly lowered if we use C++ for the gradient instead of python.   
 
